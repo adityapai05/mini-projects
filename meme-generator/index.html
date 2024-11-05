@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Meme Vibe Check ✨</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>✨ Meme Generator ✨</h1>
+        <div class="controls">
+            <button class="btn" id="nextBtn">
+                <i class="fas fa-forward"></i>
+                Next Meme
+            </button>
+            <button class="btn" id="shareBtn">
+                <i class="fas fa-share-alt"></i>
+                Share
+            </button>
+        </div>
+        <div class="meme-container">
+            <img class="meme-image" alt="Random Meme">
+            <div class="loading">
+                <div class="spinner"></div>
+            </div>
+        </div>
+        <div class="error-message">
+            Bruh... Failed to load meme! Try again! 🤔
+        </div>
+        <div class="info-bar">
+            <div class="auto-play">
+                <div class="toggle-switch" id="autoPlayToggle" data-checked="true"></div>
+                <span>Auto-play (3s)</span>
+            </div>
+            <a onclick="openReddit(event)" class="subreddit" target="_blank"></a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -55,17 +55,26 @@ const generatePassword = (lower, upper, number, symbol, length) => {
     ].filter(type => Object.values(type)[0]);
 
     const typeCount = typesArr.length;
-
     if (typeCount === 0) return '';
+    
+    typesArr.forEach(type => {
+        const funcName = Object.keys(type)[0];
+        generatedPassword += randomFunction[funcName]();
+    });
 
-    for (let i = 0; i < length; i++) {
-        const randomType = typesArr[Math.floor(Math.random() * typeCount)]; 
-        const keyFromRandFunc = Object.keys(randomType)[0]; 
-        generatedPassword += randomFunction[keyFromRandFunc]();
+    for (let i = typeCount; i < length; i++) {
+        const randomType = typesArr[Math.floor(Math.random() * typeCount)];
+        const funcName = Object.keys(randomType)[0];
+        generatedPassword += randomFunction[funcName]();
     }
 
-    return generatedPassword;
+    return shufflePassword(generatedPassword);
 };
+
+const shufflePassword = (password) => {
+    return password.split('').sort(() => Math.random() - 0.5).join('');
+};
+
 
 const copyText = () => {
     const passwordText = resultEl.textContent;

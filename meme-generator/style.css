@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #8B31FF;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: #FF2E63;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 8px 8px 0 #000000;
+    border: 3px solid #000000;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 0 #000000;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: 3px solid #000000;
+    border-radius: 12px;
+    background: #00F5FF;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 0 #000000;
+}
+
+.btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #000000;
+}
+
+.btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #000000;
+}
+
+.btn i {
+    font-size: 1.2em;
+}
+
+.meme-container {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+    aspect-ratio: 16/9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #000000;
+    box-shadow: 6px 6px 0 #000000;
+}
+
+.meme-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #00F5FF;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.info-bar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #FFE900;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: #000000;
+    font-weight: bold;
+    border: 3px solid #000000;
+    box-shadow: 4px 4px 0 #000000;
+}
+
+.auto-play {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Simplified Toggle Switch */
+.toggle-switch {
+    background: #ffffff;
+    border: 3px solid #000000;
+    padding: 5px;
+    width: 65px;
+    height: 32px;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.toggle-switch[data-checked="true"] {
+    background: #00F5FF;
+}
+
+.toggle-switch::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: #000000;
+    border-radius: 50%;
+    transition: 0.3s;
+    margin-left: 0;
+}
+
+.toggle-switch[data-checked="true"]::after {
+    margin-left: 33px;
+}
+
+.subreddit {
+    background: #ffffff;
+    padding: 8px 16px;
+    border-radius: 12px;
+    border: 3px solid #000000;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 3px 3px 0 #000000;
+}
+
+.subreddit:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 #000000;
+    background: #00F5FF;
+}
+
+.subreddit:active {
+    transform: translate(1px, 1px);
+    box-shadow: 2px 2px 0 #000000;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.error-message {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 10px;
+    padding: 10px;
+    background: #000000;
+    border-radius: 8px;
+    display: none;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+}
+
+.subreddit {
+    background: #ffffff;
+    padding: 5px 12px;
+    border-radius: 8px;
+    border: 2px solid #000000;
+}
