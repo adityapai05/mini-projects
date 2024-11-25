@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap");
 
 :root {
-  --primary-colour: #ff5722; /* Orange from the pot */
-  --primary-colour-dark: #e64a19; /* Darker orange */
-  --secondary-colour: rgb(92, 250, 250); /* Green from the vegetables */
-  --text-dark: #4a2f23; /* Brown from the soup base */
-  --extra-light: #e0f7fa; /* Light blue background */
-  --highlight-colour: #ffeb3b; /* Yellow from the bell pepper */
-
+  --primary-colour: #ff5722;
+  --primary-colour-dark: #e64a19;
+  --secondary-colour: rgb(92, 250, 250);
+  --text-dark: #4a2f23;
+  --extra-light: #e0f7fa;
+  --highlight-colour: #ffeb3b;
   --max-width: 600px;
 }
 
@@ -20,7 +19,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   overflow: hidden;
-  background-color: var(--extra-light); /* New background color */
+  background-color: var(--extra-light);
 }
 
 a,
@@ -31,9 +30,7 @@ a:visited {
 
 .container {
   min-height: 100vh;
-  background-color: var(
-    --secondary-colour
-  ); /* Green for container background */
+  background-color: var(--secondary-colour);
   display: flex;
   overflow: hidden;
 }
@@ -51,14 +48,14 @@ a:visited {
   top: 0;
   right: 5rem;
   text-align: left;
-  background-color: var(--extra-light); /* Light blue ribbon */
+  background-color: var(--extra-light);
   z-index: 2;
 }
 .ribbon-white h1 {
-    line-height: 2.5rem;
+  line-height: 2.5rem;
 }
 .ribbon-white h1 span {
-  color: var(--primary-colour); /* Highlighted orange */
+  color: var(--primary-colour);
 }
 
 .ribbon-red {
@@ -68,7 +65,7 @@ a:visited {
   transform: translateY(-50%);
   width: 100%;
   height: 350px;
-  background-color: var(--primary-colour); /* Orange ribbon */
+  background-color: var(--primary-colour);
   z-index: 1;
 }
 
@@ -121,14 +118,14 @@ a:visited {
 
 .navbar span {
   padding: 0.5rem;
-  color: var(--text-dark); /* Light blue text */
+  color: var(--text-dark);
   font-size: 1.2rem;
   font-weight: 500;
   transition: 0.3s;
 }
 
 .navbar span:hover {
-  color: var(--primary-colour-dark); /* Yellow on hover */
+  color: var(--primary-colour-dark);
   cursor: pointer;
 }
 
@@ -137,34 +134,34 @@ a:visited {
   text-align: center;
   font-weight: 500;
   border-radius: 5rem;
-  background-color: red; /* Orange button */
-  color: var(--extra-light) !important; /* Light text */
+  background-color: red;
+  color: var(--extra-light) !important;
   transition: 0.3s;
 }
 
 .navbar .youtube:hover {
-  background-color: darkred; /* Darker orange */
+  background-color: darkred;
 }
 
 .content {
   max-width: var(--max-width);
   display: grid;
-  gap: 0; /* No gap between elements */
+  gap: 0;
 }
 
 .content h1 {
-  color: var(--text-dark); /* Light blue */
+  color: var(--text-dark);
   font-size: 4rem;
   line-height: 4rem;
   margin: 0;
 }
 
 .content h1 span {
-  color: var(--primary-colour); /* Orange text */
+  color: var(--primary-colour);
 }
 
 .content p {
-  color: var(--text-dark); /* Light blue */
+  color: var(--text-dark);
 }
 
 .carousal {
@@ -179,7 +176,7 @@ a:visited {
 }
 
 .carousal .slide {
-  flex: 0 0 30%; /* Show 3 images at a time */
+  flex: 0 0 30%;
   height: 125px;
   border-radius: 7px;
   overflow: hidden;
@@ -188,16 +185,16 @@ a:visited {
 }
 
 .carousal .slide .slide-image {
-    height: 100%;
-    width: 100%;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: 0.3s;
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.3s;
 }
 
-.carousal .slide:hover  .slide-image {
-    transform: scale(1.1);
+.carousal .slide:hover .slide-image {
+  transform: scale(1.1);
 }
 
 .carousal .slide:nth-child(1) .slide-image {
