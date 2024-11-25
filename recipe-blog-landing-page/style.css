@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap");
+
+:root {
+  --primary-colour: #ff5722; /* Orange from the pot */
+  --primary-colour-dark: #e64a19; /* Darker orange */
+  --secondary-colour: rgb(92, 250, 250); /* Green from the vegetables */
+  --text-dark: #4a2f23; /* Brown from the soup base */
+  --extra-light: #e0f7fa; /* Light blue background */
+  --highlight-colour: #ffeb3b; /* Yellow from the bell pepper */
+
+  --max-width: 600px;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: var(--extra-light); /* New background color */
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  min-height: 100vh;
+  background-color: var(
+    --secondary-colour
+  ); /* Green for container background */
+  display: flex;
+  overflow: hidden;
+}
+
+.container-left,
+.container-right {
+  flex: 1;
+  position: relative;
+}
+
+.ribbon-white {
+  position: absolute;
+  height: 100%;
+  width: 400px;
+  top: 0;
+  right: 5rem;
+  text-align: left;
+  background-color: var(--extra-light); /* Light blue ribbon */
+  z-index: 2;
+}
+.ribbon-white h1 {
+    line-height: 2.5rem;
+}
+.ribbon-white h1 span {
+  color: var(--primary-colour); /* Highlighted orange */
+}
+
+.ribbon-red {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 350px;
+  background-color: var(--primary-colour); /* Orange ribbon */
+  z-index: 1;
+}
+
+.container-left img {
+  position: absolute;
+  bottom: 30px;
+  right: calc(5rem + 40px);
+  width: 320px;
+  transform: scale(130%);
+  z-index: 3;
+}
+.logo-container {
+  position: absolute;
+  top: 4.4rem;
+  left: 10rem;
+  width: 75px;
+  height: 75px;
+  z-index: 3;
+}
+.container-left .logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.ribbon-white h1 {
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  position: relative;
+  left: 6.5rem;
+  top: -0.7rem;
+}
+.container-right {
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navbar {
+  padding: 2.5rem 0;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.navbar span {
+  padding: 0.5rem;
+  color: var(--text-dark); /* Light blue text */
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar span:hover {
+  color: var(--primary-colour-dark); /* Yellow on hover */
+  cursor: pointer;
+}
+
+.navbar .youtube {
+  width: 100px;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 5rem;
+  background-color: red; /* Orange button */
+  color: var(--extra-light) !important; /* Light text */
+  transition: 0.3s;
+}
+
+.navbar .youtube:hover {
+  background-color: darkred; /* Darker orange */
+}
+
+.content {
+  max-width: var(--max-width);
+  display: grid;
+  gap: 0; /* No gap between elements */
+}
+
+.content h1 {
+  color: var(--text-dark); /* Light blue */
+  font-size: 4rem;
+  line-height: 4rem;
+  margin: 0;
+}
+
+.content h1 span {
+  color: var(--primary-colour); /* Orange text */
+}
+
+.content p {
+  color: var(--text-dark); /* Light blue */
+}
+
+.carousal {
+  position: absolute;
+  bottom: 4rem;
+  right: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.carousal .slide {
+  flex: 0 0 30%; /* Show 3 images at a time */
+  height: 125px;
+  border-radius: 7px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.carousal .slide .slide-image {
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+}
+
+.carousal .slide:hover  .slide-image {
+    transform: scale(1.1);
+}
+
+.carousal .slide:nth-child(1) .slide-image {
+  background-image: url("./assets/food1.jpg");
+}
+
+.carousal .slide:nth-child(2) .slide-image {
+  background-image: url("./assets/food2.jpg");
+}
+
+.carousal .slide:nth-child(3) .slide-image {
+  background-image: url("./assets/food3.jpg");
+}
