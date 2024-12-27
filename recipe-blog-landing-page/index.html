@@ -4,55 +4,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sangeeta's Food Paradise</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
-    <title>Sangeeta's Food Paradise</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
 </head>
 
 <body>
-    <main class="container">
-        <div class="container-left">
-            <div class="ribbon-white">
-                <div class="logo-container">
-                    <img src="./assets/logo.png" alt="Logo" class="logo">
-                </div>
-                <h1>Sangeeta's <br><span>Food Paradise</span></h1>
-            </div>
-            <img id="profile-image" src="./assets/sangeetabg1.png" alt="profile">
-            <div class="ribbon-red"></div>
+    <nav>
+        <div class="logo-container">
+            <img src="assets/logo.png" alt="Cooking Pot Logo" class="logo">
+            <span class="brand-name">Sangeeta's <span>Food Paradise</span></span>
         </div>
-        <div class="container-right">
-            <div class="navbar">
-                <span>Home</span>
-                <span>Recipes</span>
-                <span>About</span>
-                <span>Contact</span>
-                <span class="youtube"><a href="https://www.youtube.com/sangeetasfoodparadise">Youtube</a></span>
-            </div>
-            <div class="content">
-                <h1>Explore a <br><span>World of Flavours.</span></h1>
-                    <p>Welcome to Sangeeta's Food Paradise, a blog dedicated to bringing you delicious recipes from
-                        around the world! Whether you're craving traditional Indian dishes or new fusion ideas, you'll
-                        find inspiration here. Join me on this culinary journey where fresh ingredients meet exciting
-                        flavors!</p>
-            </div>
-            <div class="carousal">
-                <div class="slide">
-                    <div class="slide-image"></div>
-                </div>
-                <div class="slide">
-                    <div class="slide-image"></div>
-                </div>
-                <div class="slide">
-                    <div class="slide-image"></div>
-                </div>
+        <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#categories">Recipes</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="https://www.youtube.com/sangeetasfoodparadise" class="youtube-btn" target="_blank">YouTube</a>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-left">
+            <div class="profile-container">
+                <img id="profileImage" src="assets/sangeetabg1.png" alt="Sangeeta Pai" class="profile-image">
             </div>
         </div>
-    </main>
+        <div class="hero-right">
+            <h1>Explore a <span class="highlight"><br>World of Flavours.</span></h1>
+            <p>Welcome to Sangeeta's Food Paradise, a blog dedicated to bringing you delicious recipes from around the
+                world! Whether you're craving traditional Indian dishes or new fusion ideas, you'll find inspiration
+                here.</p>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-left">
+                    <div class="welcome-card">
+                        <h3>Welcome to My Kitchen!</h3>
+                        <p>I'm Sangeeta Pai, and my passion lies in making cooking an enjoyable and accessible
+                            experience for everyone. With years of culinary expertise, I bring you authentic recipes
+                            that blend traditional techniques with modern twists.</p>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <i class="fas fa-users"></i>
+                            <h4>5K+</h4>
+                            <p>Community Members</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-video"></i>
+                            <h4>200+</h4>
+                            <p>Video Recipes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-right">
+                    <div class="feature-card">
+                        <i class="fas fa-utensils"></i>
+                        <div>
+                            <h4>Culinary Expertise</h4>
+                            <p>From traditional Indian delicacies to innovative fusion dishes, I bring you recipes that
+                                are both authentic and creative.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <i class="fas fa-heart"></i>
+                        <div>
+                            <h4>Made with Love</h4>
+                            <p>Every recipe is crafted with care, using fresh and healthy ingredients to ensure your
+                                dishes are not just delicious but also nourishing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recipes</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="category-grid">
+                <div class="category-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Traditional Indian</h3>
+                    <p>Authentic recipes passed down through generations</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-globe-asia"></i>
+                    <h3>Global Fusion</h3>
+                    <p>Creative fusion of international flavors</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-apple-alt"></i>
+                    <h3>Healthy Eating</h3>
+                    <p>Nutritious recipes to nourish your body</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-cake"></i>
+                    <h3>Desserts</h3>
+                    <p>Sweet treats for every occasion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="follow" class="follow-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Stay Updated</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="follow-grid">
+                <div class="social-card">
+                    <span class="icon-youtube social-icon">
+                        <img src="assets/youtube.png" alt="">
+                    </span>
+                    <h3>YouTube</h3>
+                    <p>Long-form recipes and expert cooking tips</p>
+                    <div class="social-stats">
+                        <div class="stat">
+                            <div class="stat-value">5.4K</div>
+                            <div class="stat-label">Subscribers</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value" data-value="100">203</div>
+                            <div class="stat-label">Videos</div>
+                        </div>
+                    </div>
+                    <a href="https://youtube.com/@sangeetasfoodparadise" class="social-link"
+                        target="_blank">Subscribe</a>
+                </div>
+
+                <div class="social-card">
+                    <span class="icon-instagram social-icon">
+                        <img src="assets/instagram.png" alt="">
+                    </span>
+                    <h3>Instagram</h3>
+                    <p>Mouthwatering food pics and quick recipes</p>
+                    <div class="social-stats">
+                        <div class="stat">
+                            <div class="stat-value" data-value="25000">1.1K</div>
+                            <div class="stat-label">Followers</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value" data-value="500">77</div>
+                            <div class="stat-label">Posts</div>
+                        </div>
+                    </div>
+                    <a href="https://www.instagram.com/sangeeta_food_paradise" class="social-link"
+                        target="_blank">Follow</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="contact-card">
+                <i class="fas fa-envelope contact-icon"></i>
+                <h3 class="contact-title">For Business Inquiries</h3>
+                <a href="mailto:sangeetapai0802@gmail.com" class="contact-email">sangeetapai0802@gmail.com</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sangeeta's Food Paradise. All rights reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/119350cd6c.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

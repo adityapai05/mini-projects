@@ -1,10 +1,14 @@
-const profileImage = document.getElementById('profile-image');
-const images = ['./assets/sangeetabg1.png', './assets/sangeetabg2.png', './assets/sangeetabg3.png'];
-let currentIndex = 0;
+window.onload = function() {
+  let currentImageIndex = 0;
+  const images = [
+    'assets/sangeetabg1.png',
+    'assets/sangeetabg2.png',
+    'assets/sangeetabg3.png'
+  ];
 
-
-
-setInterval(( ) => {
-    profileImage.src = images[currentIndex];
-    currentIndex = (currentIndex + 1) % images.length;
-}, 1000);
+  setInterval(() => {
+    const profileImage = document.getElementById('profileImage');
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    profileImage.src = images[currentImageIndex];
+  }, 2000); 
+};
